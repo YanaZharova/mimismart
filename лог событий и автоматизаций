@@ -1,0 +1,74 @@
+/*
+{
+	desc:"Лог событий",
+	tag:"import-script",
+	selectArea:true,
+	vars:[
+{name:"K00",type:"devices-list",required:true,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 0",descWidth:200},
+{name:"K01",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 1",descWidth:200},
+{name:"K02",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 2",descWidth:200},
+{name:"K03",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 3",descWidth:200},
+{name:"K04",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 4",descWidth:200},
+{name:"K05",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 5",descWidth:200},
+{name:"K06",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 6",descWidth:200},
+{name:"K07",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 7",descWidth:200},
+{name:"K08",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 8",descWidth:200},
+{name:"K09",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 9",descWidth:200},
+{name:"K10",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 10",descWidth:200},
+{name:"K11",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 11",descWidth:200},
+{name:"K12",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 12",descWidth:200},
+{name:"K13",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 13",descWidth:200},
+{name:"K14",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 14",descWidth:200},
+{name:"K15",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 15",descWidth:200},
+{name:"K16",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 16",descWidth:200},
+{name:"K17",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 17",descWidth:200},
+{name:"K18",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 18",descWidth:200},
+{name:"K19",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 19",descWidth:200},
+{name:"K20",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 20",descWidth:200},
+{name:"K21",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 21",descWidth:200},
+{name:"K22",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 22",descWidth:200},
+{name:"K23",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 23",descWidth:200},
+{name:"K24",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 24",descWidth:200},
+{name:"K25",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 25",descWidth:200},
+{name:"K26",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 26",descWidth:200},
+{name:"K27",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 27",descWidth:200},
+{name:"K28",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 28",descWidth:200},
+{name:"K29",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 29",descWidth:200},
+{name:"K30",type:"devices-list",required:false,width:1000,filter:["script","dimer-lamp","light-scheme","virtual","jalousie"],desc:"Кнопка 30",descWidth:200},
+
+	]
+}
+*/
+
+V-ID/K00{srvError("event K00 = %d from %d avto %d", [K00.0], exciterId(), autoState(ADDR2SID(K00)));}
+
+#ifdef K01 V-ID/K01{srvError("event K01 = %d from %d avto %d", [K01.0], exciterId(), autoState(ADDR2SID(K01)));}#endif
+#ifdef K02 V-ID/K02{srvError("event K02 = %d from %d avto %d", [K02.0], exciterId(), autoState(ADDR2SID(K02)));}#endif
+#ifdef K03 V-ID/K03{srvError("event K03 = %d from %d avto %d", [K03.0], exciterId(), autoState(ADDR2SID(K03)));}#endif
+#ifdef K04 V-ID/K04{srvError("event K04 = %d from %d avto %d", [K04.0], exciterId(), autoState(ADDR2SID(K04)));}#endif
+#ifdef K05 V-ID/K05{srvError("event K05 = %d from %d avto %d", [K05.0], exciterId(), autoState(ADDR2SID(K05)));}#endif
+#ifdef K06 V-ID/K06{srvError("event K06 = %d from %d avto %d", [K06.0], exciterId(), autoState(ADDR2SID(K06)));}#endif
+#ifdef K07 V-ID/K07{srvError("event K07 = %d from %d avto %d", [K07.0], exciterId(), autoState(ADDR2SID(K07)));}#endif
+#ifdef K08 V-ID/K08{srvError("event K08 = %d from %d avto %d", [K08.0], exciterId(), autoState(ADDR2SID(K08)));}#endif
+#ifdef K09 V-ID/K09{srvError("event K09 = %d from %d avto %d", [K09.0], exciterId(), autoState(ADDR2SID(K09)));}#endif
+#ifdef K10 V-ID/K10{srvError("event K10 = %d from %d avto %d", [K10.0], exciterId(), autoState(ADDR2SID(K10)));}#endif
+#ifdef K11 V-ID/K11{srvError("event K11 = %d from %d avto %d", [K11.0], exciterId(), autoState(ADDR2SID(K11)));}#endif
+#ifdef K12 V-ID/K12{srvError("event K12 = %d from %d avto %d", [K12.0], exciterId(), autoState(ADDR2SID(K12)));}#endif
+#ifdef K13 V-ID/K13{srvError("event K13 = %d from %d avto %d", [K13.0], exciterId(), autoState(ADDR2SID(K13)));}#endif
+#ifdef K14 V-ID/K14{srvError("event K14 = %d from %d avto %d", [K14.0], exciterId(), autoState(ADDR2SID(K14)));}#endif
+#ifdef K15 V-ID/K15{srvError("event K15 = %d from %d avto %d", [K15.0], exciterId(), autoState(ADDR2SID(K15)));}#endif
+#ifdef K16 V-ID/K16{srvError("event K16 = %d from %d avto %d", [K16.0], exciterId(), autoState(ADDR2SID(K16)));}#endif
+#ifdef K17 V-ID/K17{srvError("event K17 = %d from %d avto %d", [K17.0], exciterId(), autoState(ADDR2SID(K17)));}#endif
+#ifdef K18 V-ID/K18{srvError("event K18 = %d from %d avto %d", [K18.0], exciterId(), autoState(ADDR2SID(K18)));}#endif
+#ifdef K19 V-ID/K19{srvError("event K19 = %d from %d avto %d", [K19.0], exciterId(), autoState(ADDR2SID(K19)));}#endif
+#ifdef K20 V-ID/K20{srvError("event K20 = %d from %d avto %d", [K20.0], exciterId(), autoState(ADDR2SID(K20)));}#endif
+#ifdef K21 V-ID/K21{srvError("event K21 = %d from %d avto %d", [K21.0], exciterId(), autoState(ADDR2SID(K21)));}#endif
+#ifdef K22 V-ID/K22{srvError("event K22 = %d from %d avto %d", [K22.0], exciterId(), autoState(ADDR2SID(K22)));}#endif
+#ifdef K23 V-ID/K23{srvError("event K23 = %d from %d avto %d", [K23.0], exciterId(), autoState(ADDR2SID(K23)));}#endif
+#ifdef K24 V-ID/K24{srvError("event K24 = %d from %d avto %d", [K24.0], exciterId(), autoState(ADDR2SID(K24)));}#endif
+#ifdef K25 V-ID/K25{srvError("event K25 = %d from %d avto %d", [K25.0], exciterId(), autoState(ADDR2SID(K25)));}#endif
+#ifdef K26 V-ID/K26{srvError("event K26 = %d from %d avto %d", [K26.0], exciterId(), autoState(ADDR2SID(K26)));}#endif
+#ifdef K27 V-ID/K27{srvError("event K27 = %d from %d avto %d", [K27.0], exciterId(), autoState(ADDR2SID(K27)));}#endif
+#ifdef K28 V-ID/K28{srvError("event K28 = %d from %d avto %d", [K28.0], exciterId(), autoState(ADDR2SID(K28)));}#endif
+#ifdef K29 V-ID/K29{srvError("event K29 = %d from %d avto %d", [K29.0], exciterId(), autoState(ADDR2SID(K29)));}#endif
+#ifdef K30 V-ID/K30{srvError("event K30 = %d from %d avto %d", [K30.0], exciterId(), autoState(ADDR2SID(K30)));}#endif
